@@ -6,6 +6,6 @@ socket.on('Hola',function(data){
 });
 
 socket.on('client:message', function(data){
-    socket.emit('server:message','Oido cocina, has dicho: ' , data );
+    socket.emit('server:message','index.js Oido cocina, has dicho: ' , data );
 });
 
