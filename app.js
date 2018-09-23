@@ -16,6 +16,7 @@ const server = app.listen(app.get('port'), () => {
 const io = socket(server);
 
 var singladura = io.of('/singladura');
+
 singladura.on('connection',function(socket){
     
     singladura.emit('Hola','Bienvenidos a Singladura ',socket.id);
