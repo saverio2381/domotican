@@ -17,11 +17,12 @@ const io = socket(server);
 
 var singladura = io.of('/singladura');
 singladura.on('connection',function(socket){
-    singladura.emit('Hola','Bienvenidos a Singladura ',socket.id);
     
+    singladura.emit('Hola','Bienvenidos a Singladura ',socket.id);
+
     singladura.on('client:message', function(data){
         singladura.emit('server:message','Oido cocina, has dicho: ' , data );
-    })
+    });
 
 });
 
